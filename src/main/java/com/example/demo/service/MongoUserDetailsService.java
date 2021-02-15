@@ -13,7 +13,6 @@ import java.util.List;
 @Component
 public class MongoUserDetailsService implements UserDetailsService {
 
-
     private UserDao repository;
 
     @Autowired

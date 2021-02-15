@@ -17,8 +17,8 @@ public class MemeService {
         this.memeDao = memeDao;
     }
 
-    public void addMeme(Meme meme) {
-        memeDao.save(meme);
+    public String addMeme(Meme meme) {
+        return memeDao.save(meme).getId();
     }
 
     public List<Meme> getMemes() {

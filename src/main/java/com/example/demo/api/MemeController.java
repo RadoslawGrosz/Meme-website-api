@@ -9,7 +9,7 @@ import java.util.List;
 
 @RequestMapping("/api/meme")
 @RestController
-@CrossOrigin
+@CrossOrigin()
 public class MemeController {
 
     private final MemeService memeService;
@@ -19,12 +19,12 @@ public class MemeController {
         this.memeService = memeService;
     }
 
-    @PostMapping
-    public void addMeme(@RequestBody Meme meme) {
-        memeService.addMeme(meme);
+    @PostMapping()
+    public String addMeme(@RequestBody Meme meme) {
+        return memeService.addMeme(meme);
     }
 
-    @GetMapping
+    @GetMapping()
     public List<Meme> getMemes() {
         return memeService.getMemes();
     }
